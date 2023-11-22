@@ -24,8 +24,16 @@
                 <a href="club">О клубе</a>
             </div>    
             <div class="identification">
+                <?php if($_SESSION['id']){ // проверка на авторизированость пользователя ?>
+
+                <a href="logout">Выйти</a>
+
+                <?php } else{ ?>
+
                 <a href="authorization">Войти</a>
                 <a href="registration">Зарегистрироваться</a>
+
+                <?php } ?>
             </div>
         </div>
     </header>

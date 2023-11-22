@@ -12,21 +12,22 @@
         <button>Войти</button>
 
 
-<?php 
+    <?php 
         if(!empty($_POST['email']) && !empty($_POST['password'])){
 
             $email = htmlspecialchars($_POST['email']); //преобразование спецальных тегов html
-            $password = password_hash($_POST['password'], PASSWORD_DEFAULT); //Хеширование пароля
     
             $push = $BOX_DB->query('SELECT * FROM `users` WHERE email = "'.$email.'"');  //запрос через PDO, который узнаёт какой пароль у этого логина
             $push->setFetchMode(PDO::FETCH_ASSOC);  //отправление запроса
             $row = $push->fetch(); // возрат данных в ввиде асоциативного массива
 
+            echo $row['password'];
+            
                 if(password_verify($_POST['password'], $row['password'])){ //сравнение введеного пароля и полученого
 
                     $_SESSION['id'] = $row['id_user']; 
 
-                    $push = $BOX_DB->query('SELECT * FROM `role` WHERE login = "'.$row['id_role'].'"');  //запрос через PDO, который узнаёт какой пароль у этого логина
+                    $push = $BOX_DB->query('SELECT * FROM `role` WHERE id_role = "'.$row['id_role'].'"');  //запрос через PDO, который узнаёт какой пароль у этого логина
                     $push->setFetchMode(PDO::FETCH_ASSOC);  //отправление запроса
                     $row = $push->fetch(); // возрат данных в ввиде асоциативного массива
 
@@ -38,12 +39,12 @@
                     echo "<p class='error'>Неверный логин или пароль.</p>"; // сообщение о некоректный данных
                 }
         }
-        ?>
+
+    ?>
 
 
 </form>
 </div>
-
 
 <?php
     include('temp/footer.php'); //подключение подвала к странице
