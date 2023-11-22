@@ -29,4 +29,4 @@
             </div>
         </div>
     </header>
-    
+<div class="main_content">    
