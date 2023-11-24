@@ -44,6 +44,12 @@ header{
     width: 100%;
 }
 
+/*  main content  */
+
+.main_content{
+    padding-bottom: 5px;
+}
+
 /*  authorization  */
 
 .form_identification{
@@ -80,4 +86,48 @@ header{
 .error{
     color: red;
     margin-bottom: 10px;
+}
+
+/* news */
+
+.card_news{
+    width: 600px;
+    border-image: linear-gradient(red, blue) 35;
+    border-width: 4px;
+    border-style: solid;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.card_news h1{
+    font-size: 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.card_news img{
+    max-width: 95%;
+    margin-bottom: 10px;
+    max-height: 400px;
+}
+.text_news{
+    margin: 0 auto;
+    width: 95%;
+    text-align: left;
+    margin-bottom: 10px;
+}
+.comment_date{
+    margin: 0 auto;
+    width: 95%;
+    margin-bottom: 10px;
+    display: flex;
+}
+.news_comment{
+    width: 50%;
+    display: inline;
+    text-align: left;
+}
+.news_date{
+    width: 50%;
+    display: inline;
+    text-align: right;
 }

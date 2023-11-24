@@ -21,6 +21,7 @@
                 <a href="schedule">Расписание</a>
                 <a href="coach">Наши тренера</a>
                 <a href="boxer">Наша гордость</a>
+                <a href="feedback">Отзывы</a>
                 <a href="club">О клубе</a>
             </div>    
             <div class="identification">

@@ -15,7 +15,7 @@
     <?php 
         if(!empty($_POST['email']) && !empty($_POST['password'])){
 
-            $email = htmlspecialchars($_POST['email']); //преобразование спецальных тегов html
+            $email = strtolower(htmlspecialchars($_POST['email'])); //преобразование спецальных тегов html и преводит в нижний регистр
     
             $push = $BOX_DB->query('SELECT * FROM `users` WHERE email = "'.$email.'"');  //запрос через PDO, который узнаёт какой пароль у этого логина
             $push->setFetchMode(PDO::FETCH_ASSOC);  //отправление запроса
