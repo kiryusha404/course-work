@@ -62,13 +62,14 @@ header{
 .user_conditions h1{
     text-align: center;
     font-size: 25px;
+    margin-bottom: 20px;
 }
 
 
 /*  authorization  */
 
 .form_identification{
-    width: 400px;
+    width: 420px;
     border-image: linear-gradient(red, blue) 35;
     border-width: 4px;
     border-style: solid;
@@ -157,5 +158,42 @@ header{
 .news_date{
     width: 50%;
     display: inline;
+    text-align: right;
+}
+
+/*  feedback */
+
+.form_feedback{
+    text-align: right;
+    margin-bottom: 20px;
+}
+.form_feedback textarea{
+    resize: none;
+    width: 98%;
+    margin-bottom: 10px;
+}
+.form_feedback button{
+    border-radius: 10px;
+    background: linear-gradient(30deg, blue, red);
+    border: #000 solid 2px;
+    color: #fff;
+}
+.feedback{
+    width: 100%;
+    border-width: 4px;
+    border-style: solid;
+    border-image: linear-gradient(red, blue) 35;
+    min-height: 60px;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+.feedback h2{
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+.text_feedback{
+    margin-bottom: 5px;
+}
+.date_feedback{
     text-align: right;
 }

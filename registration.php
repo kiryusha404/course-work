@@ -20,7 +20,7 @@
         <input type="password" name="password2" placeholder="Повторите пароль" required class="identification_input">
         <div class="checkbox">
             <input type="checkbox" id="check" name="check" required>
-            <p>Я согласен с <a href="user_conditions">пользовательскими условтями</a></p>
+            <p>Я соглашаюсь с <a href="user_conditions">пользовательскими условтями</a></p>
         </div>
         <button>Войти</button>
 

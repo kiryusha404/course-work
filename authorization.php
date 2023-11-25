@@ -22,20 +22,13 @@
 
             $email = strtolower(htmlspecialchars($_POST['email'])); //преобразование спецальных тегов html и преводит в нижний регистр
     
-            $push = $BOX_DB->query('SELECT * FROM `users` WHERE email = "'.$email.'"');  //запрос через PDO, который узнаёт какой пароль у этого логина
+            $push = $BOX_DB->query('SELECT id_user, role.name, password FROM `users` JOIN role on role.id_role = users.id_role WHERE email = "'.$email.'"');  //запрос через PDO, который узнаёт какой пароль у этого логина и его роль
             $push->setFetchMode(PDO::FETCH_ASSOC);  //отправление запроса
             $row = $push->fetch(); // возрат данных в ввиде асоциативного массива
-
-            echo $row['password'];
             
                 if(password_verify($_POST['password'], $row['password'])){ //сравнение введеного пароля и полученого
 
                     $_SESSION['id'] = $row['id_user']; 
-
-                    $push = $BOX_DB->query('SELECT * FROM `role` WHERE id_role = "'.$row['id_role'].'"');  //запрос через PDO, который узнаёт какой пароль у этого логина
-                    $push->setFetchMode(PDO::FETCH_ASSOC);  //отправление запроса
-                    $row = $push->fetch(); // возрат данных в ввиде асоциативного массива
-
                     $_SESSION['role'] = $row['name']; 
                    
                    echo "<script>window.location.href='index'</script>"; // сприпт переадресовывающий на главную страницу
