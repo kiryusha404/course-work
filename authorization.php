@@ -1,5 +1,10 @@
 <?php
     include('temp/server.php'); //подключение базы данных к странице
+
+    if(!empty($_SESSION['role'])){ // запрет заходить на эту страницу авторизированому пользователю
+        header('Location: index');
+    }
+    
     include('temp/header.php'); //подключение шапки к странице
 ?>
 
@@ -7,8 +12,8 @@
     <img src="img/main/identification.png" alt="identification">
     <h2><b>Авторизация</b></h2>
     <form action="" method="post">
-        <input type="email" name="email" placeholder="Почта" required>
-        <input type="password" name="password" placeholder="Пароль" required>
+        <input type="email" name="email" placeholder="Почта" required class="identification_input">
+        <input type="password" name="password" placeholder="Пароль" required class="identification_input">
         <button>Войти</button>
 
 

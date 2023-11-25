@@ -49,6 +49,21 @@ header{
 .main_content{
     padding-bottom: 5px;
 }
+/* user conditions */
+
+.user_conditions{
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+.user_conditions p{
+    width: 100%;
+}
+.user_conditions h1{
+    text-align: center;
+    font-size: 25px;
+}
+
 
 /*  authorization  */
 
@@ -67,13 +82,26 @@ header{
     font-size: 20px;
     margin-bottom: 15px;
 }
-.form_identification input{
+.identification_input{
     width: 80%;
     margin-bottom: 10px;
     size: 15px;
     border-radius: 10px;
     border: #000 solid 2px;
     padding-left: 10px;
+}
+.checkbox {
+    width: 85%;
+    display: flex;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+.checkbox input{
+    display: inline;
+}
+.checkbox p{
+    display: inline;
+    margin-left: 5px;
 }
 .form_identification button{
     width: 30%;
