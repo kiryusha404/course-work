@@ -197,3 +197,36 @@ header{
 .date_feedback{
     text-align: right;
 }
+
+/* boxer */
+
+.boxers{
+    width: 100%;
+}
+.boxer{
+    width: 600px;
+    margin: 0 auto;
+    border-image: linear-gradient(red, blue) 35;
+    border-width: 4px;
+    border-style: solid;
+    display: flex;
+    margin-bottom: 20px;
+}
+.img_boxer{
+    width: 30%;
+    display: inline;
+    padding: 3px;
+}
+.img_boxer img{
+    max-height: 100%;
+    max-width: 100%;
+}
+.information_boxer{
+    width: 70%;
+    display: inline;
+    padding: 3px;
+}
+.information_boxer h2{
+    font-size: 20px;
+    margin-bottom: 5px;
+}
