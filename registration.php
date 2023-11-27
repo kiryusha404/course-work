@@ -10,7 +10,7 @@
 
 <div class="form_identification">
     <img src="img/main/identification.png" alt="identification">
-    <h2><b>Авторизация</b></h2>
+    <h2><b>Регистрация</b></h2>
     <form action="" method="post">
         <input type="text" name="surname" placeholder="Фамилия" required class="identification_input">
         <input type="text" name="name" placeholder="Имя" required class="identification_input">
