@@ -27,7 +27,7 @@
                 <a href="club">О клубе</a>
             </div>    
             <div class="identification">
-                <?php if($_SESSION['id']){ // проверка на авторизированость пользователя ?>
+                <?php if(!empty($_SESSION['id'])){ // проверка на авторизированость пользователя ?>
 
                 <a href="logout">Выйти</a>
 

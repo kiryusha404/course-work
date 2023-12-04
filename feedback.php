@@ -18,7 +18,7 @@
 <?php
     if(!empty($_POST['text']) && $_POST['text'] != $_SESSION['form']){
         $text = htmlspecialchars($_POST['text']); // замена спецальных символов html на их кодировку
-        $date = date('m/d/Y H:i:s', time()); // текущие время
+        $date = date('Y/m/d H:i:s', time()); // текущие время
         $push = $BOX_DB->prepare('INSERT INTO `feedback` (`id_feedback`, `id_user`, `text_feedback`, `date_feedback`) VALUES (NULL, "'.$_SESSION['id'].'", "'.$text.'", "'.$date.'");');  //запрос без возрата результата заполнят таблицу коментарий
         $push->execute(); // выполнение запроса
         $_SESSION['form'] = $_POST['text']; // что бформа при обновлении не отправлялась снова
